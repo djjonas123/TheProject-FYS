@@ -61,7 +61,6 @@ if (!empty($_POST["register-user"])) {
     }
 }
 
-
 ?>
 
 <!DOCTYPE html>
@@ -115,7 +114,6 @@ if (!empty($_POST["register-user"])) {
 
 </div>
 
-
 <div id="band" class="container text-center">
 
 
@@ -137,7 +135,6 @@ if (!empty($_POST["register-user"])) {
 <div>
 </div>
 
-
 <script>
 $(document).ready(function(){
 
@@ -157,7 +154,6 @@ $(document).ready(function(){
 })
 </script>
 
-
 <script>
 
     var i = 0;
@@ -173,10 +169,9 @@ $(document).ready(function(){
 
     }
 
-
 </script>
 
-    <div id="band" class="container text-center">
+    <div class="container text-center">
 
 
     </div>
