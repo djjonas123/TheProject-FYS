@@ -100,12 +100,10 @@ if (!empty($_POST["login-user"])) {
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
-
 </div>
 
 
-<div id="band" class="container text-center">
-
+<div class="container text-center">
 
 </div>
 
@@ -163,7 +161,7 @@ if (!empty($_POST["login-user"])) {
 
 </script>
 
-    <div id="band" class="container text-center">
+    <div class="container text-center">
 
 
     </div>
