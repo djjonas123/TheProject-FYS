@@ -34,8 +34,8 @@
                       <a class="dropdown-toggle" data-toggle="dropdown" href="#">ACCOUNT
                         <span class="caret"></span></a>
                       <ul class="dropdown-menu">
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Register</a></li>
+                        <li><a href="../PHP/login.php">Login</a></li>
+                        <li><a href="../PHP/register.php">Register</a></li>
                         <li><a href="#">Forgot Password</a></li>
                      </ul>
                       </li>
@@ -156,7 +156,7 @@
         $('[data-toggle="tooltip"]').tooltip();
 
         // Add smooth scrolling to all links in navbar + footer link
-        $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+        $(".navbar a, footer a[href='../HTML/index.html']").on('click', function(event) {
 
             // Make sure this.hash has a value before overriding default behavior
             if (this.hash !== "") {
@@ -201,7 +201,7 @@
     <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
         <span class="glyphicon glyphicon-chevron-up"></span>
     </a><br><br>
-    <p>Powerd by Corendon Airlines</p>
+    <p>Powered by Corendon Airlines</p>
     <button class="astext" onclick="typeWriter()"><p id="demo$">&#169 Team 2 </p></button>
 </footer>
 

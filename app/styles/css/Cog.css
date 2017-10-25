@@ -97,7 +97,17 @@
     text-align: center;
     vertical-align: middle;
 }
-
-/*
-end
- */
+.error-message {
+    padding: 7px 10px;
+    background: #fff1f2;
+    border: #ffd5da 1px solid;
+    color: #027506;
+    border-radius: 4px;
+}
+.success-message {
+    padding: 7px 10px;
+    background: #cae0c4;
+    border: #c3d0b5 1px solid;
+    color: #80bdff;
+    border-radius: 4px;
+}

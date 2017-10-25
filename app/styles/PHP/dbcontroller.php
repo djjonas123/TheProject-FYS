@@ -2,10 +2,10 @@
 
 class DBController {
 
-    private $host = "localhost:3306";
-    private $user = "root";
-    private $password = "password";
-    private $database = "fys";
+    private $host = "oege.ie.hva.nl";
+    private $user = "langenf1";
+    private $password = "etxQ9xl417FnOw";
+    private $database = "zlangenf1";
     private $conn;
 
     function __construct() {
@@ -60,5 +60,4 @@ class DBController {
     }
 
 }
-
 ?>
