@@ -62,7 +62,7 @@ if (!empty($_POST["register-user"])) {
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" type="text/css" href="../css/main.css">
+        <link rel="stylesheet" type="text/css" href="../css/main2.css">
         <link rel="stylesheet" type="text/css" href="../css/Cog.css">
         <script src="../js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -113,7 +113,7 @@ if (!empty($_POST["register-user"])) {
                             <input type="text" placeholder="E-mail address " name="email" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>">
                             <input type="password" placeholder="Password" name="password" value=""/>
                             <input type="password" placeholder="Repeat password" name="confirm_password" value=""/>
-                            <input type="submit" name="register-user" value="Register" class="button">
+                            <button type="submit" name="register-user" value="Register" class="button">Register</button>
                             <p class="message">Already registered? <a href="login.php">Login here</a></p>
                         </form>
                     </div>
@@ -157,7 +157,7 @@ if (!empty($_POST["register-user"])) {
 
                 </script>
 
-                <footer class="text-center">
+                <footer  class="text-center">
                     <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
                         <span class="glyphicon glyphicon-chevron-up"></span>
                     </a><br><br>

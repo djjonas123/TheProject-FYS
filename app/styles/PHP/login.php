@@ -52,7 +52,7 @@ if (!empty($_POST["login-user"])) {
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" type="text/css" href="../css/main.css">
+        <link rel="stylesheet" type="text/css" href="../css/main2.css">
         <link rel="stylesheet" type="text/css" href="../css/Cog.css">
         <script src="../js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -87,7 +87,8 @@ if (!empty($_POST["login-user"])) {
                 </div>
             </div>
         </nav>
-
+   
+        <div id="halloworld">
         <?php if (!empty($success_message)) { ?>	
             <div class="success-message"><?php if (isset($success_message)) echo $success_message; ?></div>
         <?php } ?>
@@ -102,12 +103,15 @@ if (!empty($_POST["login-user"])) {
                         <form class="login-form" method="post" action="">
                             <input type="text" placeholder="E-mail address" name="email" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>"/>
                             <input type="password" placeholder="Password" name="password" value = ""/>
-                            <input type="submit" name="login-user" value="Login" class="button">
+                            <button type="submit" name="login-user" value="login" class="button">Login</button>
                             <p class="message">Not registered? <a href="register.php">Create an account</a></p>
                         </form>
                     </div>
                 </div>
-
+            </div>
+        </div>
+        </div>
+                
                 <script>
                     $(document).ready(function () {
 
@@ -126,7 +130,7 @@ if (!empty($_POST["login-user"])) {
                         });
                     })
                 </script>
-
+                
 
                 <script>
 
@@ -146,7 +150,7 @@ if (!empty($_POST["login-user"])) {
 
                 </script>
 
-                <footer class="text-center">
+                <footer  class="text-center">
                     <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
                         <span class="glyphicon glyphicon-chevron-up"></span>
                     </a><br><br>

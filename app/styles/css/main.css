@@ -61,14 +61,14 @@ h3, h4 {
 .btn {
     padding: 10px 20px;
     background-color: #333;
-    color: #f1f1f1;
+    color: #5F021F;
     border-radius: 0;
     transition: .2s;
 }
 .btn:hover, .btn:focus {
     border: 1px solid #333;
-    background-color: #fff;
-    color: #000;
+    background-color: #5F021F;
+    color: #5F021F;
 }
 .modal-header, h4, .close {
     background-color: #333;
@@ -143,4 +143,7 @@ textarea {
     border:none;
     margin:0;
     padding:0;
+}
+.btncolor {
+    background-color: #5F021F;
 }
