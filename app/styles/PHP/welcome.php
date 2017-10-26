@@ -102,13 +102,7 @@ include('../../styles/PHP/session.php');
                 }
                 ?> 
         
-        <div class="form">
-            <form class="login-form">
-                <p class="message">Download all pictures</p>
-                <br>
-                <button>Download</button>
-            </form>
-        </div>
+       
 
  
 
@@ -169,17 +163,22 @@ include('../../styles/PHP/session.php');
 
         </script>
 
-        <div class="container text-center">
-
-
+     
+        <div class="bottomlock">       
+ <div class="form">
+            <form class="login-form">
+                <p class="message">Download all pictures</p>
+                <br>
+                <button>Download</button>
+            </form>
         </div>
-
+        </div>
 
         <footer class="text-center">
             <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
                 <span class="glyphicon glyphicon-chevron-up"></span>
             </a><br><br>
-            <p>Powerd by Corendon Airlines</p>
+            <p>Powered by Corendon Airlines</p>
             <button class="astext" onclick="typeWriter()"><p id="demo$">&#169 Team 2 </p></button>
         </footer>
     </body>
