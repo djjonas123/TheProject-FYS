@@ -1,10 +1,11 @@
-<?php 
-include("../PHP/session.php");
+<?php
+include("session.php");
+include("changePassword.php");
 ?>
 <html lang="en">
 
     <head>
-        <title>Corendon Photo Gallary</title>
+        <title>Corendon Photo Gallery</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -28,7 +29,7 @@ include("../PHP/session.php");
                         <span class="icon-bar"></span>
                     </button>
 
-                    <a class="navbar-brand" href="../HTML/index.php.html">CORENDON</a>
+                    <a class="navbar-brand" href="index.php.html">CORENDON</a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
@@ -80,23 +81,26 @@ include("../PHP/session.php");
                         <p>Where does this go?</p>
 
 
-                        <form class="login-form">
+                        <form class="login-form" method="post" action="">
 
                             <div class="row">
-
-                                <input type="text" placeholder="E-mail address "readonly/>
-                                <br>
-
-                                <br>
-                                <p>Change your password</p>
-                                <input type="password" placeholder="Old Password"/>
-                                <input type="password" placeholder="New Password"/>
-                                <input type="password" placeholder="Repeat Password"/>
-                                <br>
-                                <button class="button2" style="vertical-align:middle"><span>Save Changes </span></button>
-                                <br>
-                                <br>
-                            </div>
+                                <p>Change your password</p>  
+                                <div id="halloworld">
+                                    <?php if (!empty($success_message)) { ?>	
+                                        <div class="success-message"><?php if (isset($success_message)) echo $success_message; ?></div>
+                                    <?php } ?>
+                                    <?php if (!empty($error_message)) { ?>	
+                                        <div class="error-message"><?php if (isset($error_message)) echo $error_message; ?></div>
+                                    <?php } ?>
+                                        
+                                    <input type="password" placeholder="Old Password" name="old_password" value=""/>
+                                    <input type="password" placeholder="New Password" name="password" value=""/>
+                                    <input type="password" placeholder="Repeat new password" name="confirm_password" value=""/>
+                                    <br>
+                                    <button type = "submit" class="button2" style="vertical-align:middle"><span>Save Changes </span></button>
+                                    <br>
+                                    <br>
+                                </div>
 
                         </form>
                     </div>
@@ -152,7 +156,7 @@ include("../PHP/session.php");
 
                 $('[data-toggle="tooltip"]').tooltip();
 
-                $(".navbar a, footer a[href='../HTML/index.php']").on('click', function (event) {
+                $(".navbar a, footer a[href='index.php']").on('click', function (event) {
                     if (this.hash !== "") {
                         event.preventDefault();
                         var hash = this.hash;
@@ -211,7 +215,7 @@ include("../PHP/session.php");
         </div>
 
         <footer class="text-center">
-            <a class="up-arrow" href="../HTML/index.php.html" data-toggle="tooltip" title="TO TOP">
+            <a class="up-arrow" href="index.php.html" data-toggle="tooltip" title="TO TOP">
                 <span class="glyphicon glyphicon-chevron-up"></span>
             </a><br><br>
             <p>Powerd by Corendon Airlines</p>
