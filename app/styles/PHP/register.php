@@ -1,21 +1,22 @@
 <?php
+include ("session2.php");
 if (!empty($_POST["register-user"])) {
     /* Form Required Field Validation */
     foreach ($_POST as $key => $value) {
         if (empty($_POST[$key])) {
-            $error_message = "Vul alstublieft alle velden in.";
+            $error_message = "Please fill in all fields.";
             break;
         }
     }
     /* Password Matching Validation */
     if ($_POST['password'] != $_POST['confirm_password']) {
-        $error_message = 'Wachtwoorden moeten hetzelfde zijn.';
+        $error_message = 'Passwords have to be identical';
     }
 
     /* Email Validation */
     if (!isset($error_message)) {
         if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-            $error_message = "Ongeldig Emailadres";
+            $error_message = "Invalid email.";
         }
     }
 
@@ -25,7 +26,7 @@ if (!empty($_POST["register-user"])) {
         $query = "SELECT email FROM login where email = '" . $_POST["email"] . "'";
         $rowcount = $db_handle->numRows($query);
         if ($rowcount > 0) {
-            $error_message = "Er is al een account geregistreerd op dit emailadres.";
+            $error_message = "There's already an account registered to this email.";
         } else {
             $hash = md5($_POST["email"]);
             $path = "../../images/$hash";
@@ -44,19 +45,17 @@ if (!empty($_POST["register-user"])) {
 		('" . $_POST["email"] . "', '" . md5($_POST["email"]) . "', '" . md5($_POST["password"]) . "')";
         $result = $db_handle->insertQuery($query);
         if (!empty($result)) {
-            $error_message = "";
-            $success_message = "U heeft zich succesvol geregistreerd";
             header("location: login.php");
             unset($_POST);
         } else {
-            $error_message = "Er was een probleem met het registreren, probeer het alstublieft opnieuw.";
+            $error_message = "There was an error registering, please try again.";
         }
     }
 }
 ?>
 <html lang="en">
     <head>
-        <title>Corendon Photo Gallery</title>
+        <title>Register</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -89,8 +88,6 @@ if (!empty($_POST["register-user"])) {
                                 <span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="login.php">Login</a></li>
-                                <li><a href="register.php">Register</a></li>
-                                <li><a href="#">Forgot Password</a></li>
                             </ul>
                         </li>
                     </ul>

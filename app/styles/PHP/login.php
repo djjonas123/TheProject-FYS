@@ -1,17 +1,17 @@
 <?php
-session_start();
+include ("session2.php");
 if (!empty($_POST["login-user"])) {
     /* Form Required Field Validation */
     foreach ($_POST as $key => $value) {
         if (empty($_POST[$key])) {
-            $error_message = "Vul alstublieft alle velden in.";
+            $error_message = "Please fill in all fields.";
             break;
         }
     }
     /* Email Validation */
     if (!isset($error_message)) {
         if (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)) {
-            $error_message = "Ongeldig Emailadres.";
+            $error_message = "Invalid email";
         }
     }
 
@@ -28,25 +28,25 @@ if (!empty($_POST["login-user"])) {
             $result = $db_handle->updateQuery($query);
             while ($row = $result->fetch_assoc()) {
                 if ($row['password'] === md5($_POST["password"])) {
-                    $success_message = "U bent succesvol ingelogd.";
                     $error_message = "";
                     $_SESSION['login_user'] = $_POST["email"];
-                    header("Location: ../../images/" . md5($_POST["email"]) . "/welcome.php");
+                    header("location: index2.php");
                     unset($_POST);
                 } else {
-                    $error_message = "Er was een probleem met het inloggen, probeer het alstublieft opnieuw.";
-                    header("index.php");
+                    $error_message = "There was an error logging in, please try again.";
+                    unset($_POST);
                 }
             }
         } else {
-            $error_message = "Er was een probleem met het inloggen, probeer het alstublieft opnieuw.";
+            $error_message = "There was an error logging in, please try again.";
+            unset($_POST);
         }
     }
 }
 ?>
 <html lang="en">
     <head>
-        <title>Corendon Photo Gallery</title>
+        <title>Login</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -78,9 +78,7 @@ if (!empty($_POST["login-user"])) {
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">ACCOUNT
                                 <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="login.php">Login</a></li>
                                 <li><a href="register.php">Register</a></li>
-                                <li><a href="#">Forgot Password</a></li>
                             </ul>
                         </li>
                     </ul>

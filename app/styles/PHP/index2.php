@@ -1,5 +1,5 @@
 <?php
-include ("session2.php");
+include ("session.php");
 ?>
 <html lang="en">
 <head>
@@ -37,8 +37,9 @@ include ("session2.php");
                       <a class="dropdown-toggle" data-toggle="dropdown" href="#">ACCOUNT
                         <span class="caret"></span></a>
                       <ul class="dropdown-menu">
-                          <li><a href="../PHP/register.php">Register</a></li>
-                        <li><a href="../PHP/login.php">Login</a></li>
+                        <li><a href="AccountSettings.php">Account Settings</a></li>
+                         <li><a href="../../images/<?php echo md5($_SESSION['login_user']) ?>/welcome.php">Gallery</a></li>
+                        <li><a href="../PHP/logout.php">Logout</a></li>
                      </ul>
                       </li>
                      </ul>

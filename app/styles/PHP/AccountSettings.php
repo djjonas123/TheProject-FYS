@@ -7,14 +7,14 @@ if (!empty($_POST["change_pw"])) {
     /* Form Required Field Validation */
     foreach ($_POST as $key => $value) {
         if (empty($_POST[$key])) {
-            $error_message = "Vul alstublieft alle velden in.";
+            $error_message = "Please fill in all fields.";
             break;
         }
     }
 
     /* Password Matching Validation */
     if ($_POST['password'] != $_POST['confirm_password']) {
-        $error_message = 'Wachtwoorden moeten hetzelfde zijn.';
+        $error_message = 'Passwords have to be identical';
     }
 
     if (!isset($error_message)) {
@@ -30,11 +30,11 @@ if (!empty($_POST["change_pw"])) {
                 $query2 = "UPDATE login SET password = '" . md5($_POST['password']) . "' WHERE '" . $_SESSION["login_user"] . "' = email";
                 $result2 = $db_handle->deleteQuery($query2);
                 if (!empty($result2)) {
-                    $succes_message = "U heeft uw wachtwoord succesvol veranderd.";
+                    $succes_message = "You succesfully changed your password.";
                     unset($_POST);
                 }
             } else {
-                $error_message = "Vul alstublieft uw juiste oude wachtwoord in. " . $_POST["old_password"] . "";
+                $error_message = "Please fill in your correct old password.";
                 unset($_POST);
             }
         }
@@ -44,14 +44,13 @@ if (!empty($_POST["change_pw"])) {
 <html lang="en">
 
     <head>
-        <title>Corendon Photo Gallery</title>
+        <title>Account Settings</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
         <link rel="stylesheet" type="text/css" href="../css/main3.css">
-        <link rel="stylesheet" type="text/css" href="../css/Co.css">
         <link rel="stylesheet" type="text/css" href="../css/Account.css">
         <script src="../js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -69,7 +68,7 @@ if (!empty($_POST["change_pw"])) {
                         <span class="icon-bar"></span>
                     </button>
 
-                    <a class="navbar-brand" href="index.php">CORENDON</a>
+                    <a class="navbar-brand" href="index2.php">CORENDON</a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
@@ -78,9 +77,8 @@ if (!empty($_POST["change_pw"])) {
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">ACCOUNT
                                 <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Account Settings</a></li>
-                                <li><a href="#">Gallery</a></li>
-                                <li><a href="#">Logout</a></li>
+                                <li><a href="../../images/<?php echo md5($_SESSION['login_user']) ?>/welcome.php">Gallery</a></li>
+                                <li><a href="logout.php">Logout</a></li>
                             </ul>
                         </li>
                     </ul>
