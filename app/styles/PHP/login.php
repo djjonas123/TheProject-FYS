@@ -87,16 +87,16 @@ if (!empty($_POST["login-user"])) {
                 </div>
             </div>
         </nav>
-   
-        <div id="halloworld">
-        <?php if (!empty($success_message)) { ?>	
-            <div class="success-message"><?php if (isset($success_message)) echo $success_message; ?></div>
-        <?php } ?>
-        <?php if (!empty($error_message)) { ?>	
-            <div class="error-message"><?php if (isset($error_message)) echo $error_message; ?></div>
-        <?php } ?>
 
-      
+        <div id="halloworld">
+            <?php if (!empty($success_message)) { ?>	
+                <div class="success-message"><?php if (isset($success_message)) echo $success_message; ?></div>
+            <?php } ?>
+            <?php if (!empty($error_message)) { ?>	
+                <div class="error-message"><?php if (isset($error_message)) echo $error_message; ?></div>
+            <?php } ?>
+
+
             <div id="form_login">
                 <div class="login-page">
                     <div class="form">
@@ -110,52 +110,51 @@ if (!empty($_POST["login-user"])) {
                 </div>
             </div>
         </div>
-                
-                <script>
-                    $(document).ready(function () {
 
-                        $('[data-toggle="tooltip"]').tooltip();
+        <script>
+            $(document).ready(function () {
 
-                        $(".navbar a, footer a[href='index.php']").on('click', function (event) {
-                            if (this.hash !== "") {
-                                event.preventDefault();
-                                var hash = this.hash;
-                                $('html, body').animate({
-                                    scrollTop: $(hash).offset().top
-                                }, 900, function () {
-                                    window.location.hash = hash;
-                                });
-                            }
+                $('[data-toggle="tooltip"]').tooltip();
+
+                $(".navbar a, footer a[href='index.php']").on('click', function (event) {
+                    if (this.hash !== "") {
+                        event.preventDefault();
+                        var hash = this.hash;
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 900, function () {
+                            window.location.hash = hash;
                         });
-                    })
-                </script>
-                
-
-                <script>
-
-                    var i = 0;
-                    var txt = 'The Cake Is A Lie.';
-                    var speed = 50;
-
-                    function typeWriter() {
-                        if (i < txt.length) {
-                            document.getElementById("demo$").innerHTML += txt.charAt(i);
-                            i++;
-                            setTimeout(typeWriter, speed);
-                        }
-
                     }
+                });
+            })
+        </script>
 
 
-                </script>
+        <script>
 
-                <footer  class="text-center">
-                    <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
-                        <span class="glyphicon glyphicon-chevron-up"></span>
-                    </a><br><br>
-                    <p>Powered by Corendon Airlines</p>
-                    <button class="astext" onclick="typeWriter()"><p id="demo$">&#169 Team 2 </p></button>
-                </footer>
-                </body>
-                </html>
-<!-- HEllo --->
+            var i = 0;
+            var txt = 'The Cake Is A Lie.';
+            var speed = 50;
+
+            function typeWriter() {
+                if (i < txt.length) {
+                    document.getElementById("demo$").innerHTML += txt.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+
+            }
+
+
+        </script>
+
+        <footer  class="text-center">
+            <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+                <span class="glyphicon glyphicon-chevron-up"></span>
+            </a><br><br>
+            <p>Powered by Corendon Airlines</p>
+            <button class="astext" onclick="typeWriter()"><p id="demo$">&#169 Team 2 </p></button>
+        </footer>
+    </body>
+</html>

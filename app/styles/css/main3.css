@@ -159,9 +159,8 @@ textarea {
 }
 
 .login-page {
-    width: 360px;
     padding-top: 5%;
-    left: 28%;
+    width: 100%;
     margin: auto;
     position: absolute;
 }
