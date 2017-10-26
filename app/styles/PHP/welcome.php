@@ -1,5 +1,6 @@
 <?php
 include('../../styles/PHP/session.php');
+include ("session.php");
 ?>
 <html>
     <head>
