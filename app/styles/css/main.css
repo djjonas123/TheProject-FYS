@@ -1,6 +1,9 @@
-body {
+html,body {
     font: 400 15px/1.8 Lato, sans-serif;
     color: #777;
+    margin:0;
+    padding:0;
+    height:100%;
 }
 h3, h4 {
     margin: 10px 0 30px 0;
@@ -22,18 +25,11 @@ h3, h4 {
     border-color: #f1f1f1;
 }
 .carousel-inner img {
-    -webkit-filter: grayscale(0%);
-    filter: grayscale(0%); /* make all photos black and white */
-    width: 100%; /* Set width to 100% */
+    width: 100%; 
     margin: auto;
 }
 .carousel-caption h3 {
     color: #fff !important;
-}
-@media (max-width: 600px) {
-    .carousel-caption {
-        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-    }
 }
 .bg-1 {
     background: #5F021F;
@@ -123,7 +119,11 @@ h3, h4 {
 footer {
     background-color: #5F021F;
     color: #f5f5f5;
-    padding: 32px;
+    padding: 1rem;
+    position: static;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
 footer a {
     color: #f5f5f5;
@@ -151,3 +151,4 @@ textarea {
     bottom: 10px;
     padding-top: 800px;
 }
+

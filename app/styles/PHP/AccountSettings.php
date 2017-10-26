@@ -50,7 +50,8 @@ if (!empty($_POST["change_pw"])) {
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" type="text/css" href="../css/main.css">
+        <link rel="stylesheet" type="text/css" href="../css/main3.css">
+        <link rel="stylesheet" type="text/css" href="../css/Co.css">
         <link rel="stylesheet" type="text/css" href="../css/Account.css">
         <script src="../js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -68,7 +69,7 @@ if (!empty($_POST["change_pw"])) {
                         <span class="icon-bar"></span>
                     </button>
 
-                    <a class="navbar-brand" href="index.php.html">CORENDON</a>
+                    <a class="navbar-brand" href="index.php">CORENDON</a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
@@ -87,39 +88,23 @@ if (!empty($_POST["change_pw"])) {
             </div>
         </nav>
 
-        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-        </div>
-
-
-        <div class="container text-center">
-
-        </div>
-
-
-        <div id="form_login">
-            <div class="login-page">
-                <div class="form">
-
-                    <div class="row">
-
-                        <h6>ACCOUNT SETTINGS</h6>
-                    </div>
-
-
-                </div>
-            </div>
-        </div>
-
-        <div id="halloworld">
-            <?php if (!empty($success_message)) { ?>	
+    
+ <div class="login-page">
+        
+      <center><?php if (!empty($success_message)) { ?>	
                 <div class="success-message"><?php if (isset($success_message)) echo $success_message; ?></div>
             <?php } ?>
             <?php if (!empty($error_message)) { ?>	
                 <div class="error-message"><?php if (isset($error_message)) echo $error_message; ?></div>
-            <?php } ?>
-            <div id="husband">
-                <div class="login-page">
+            <?php } ?></center>
+
+
+  <div id="halloworld">
+
+                    <div class="form">
+                       <h6>ACCOUNT SETTINGS</h6>
+                    </div>
+
                     <div class="form">
                         <form class="login-form" method="post" action="">
                             <p>Change your password</p>  
@@ -130,16 +115,9 @@ if (!empty($_POST["change_pw"])) {
                             <br><br>
                         </form>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <div>
-            <div class="login-page">
                 <div class="form">
                     <form class="login-form">
                         <div class="row">
-
                             <p>How many days do you want to keep your pictures available on this site.</p>
                             <br>
                             <div class="range-slider">
@@ -147,16 +125,12 @@ if (!empty($_POST["change_pw"])) {
                                 <span class="range-slider__value">0</span>
                             </div>
 
-                        </div>
+                        </div>  
+                
                         <br>
                         <button class="button2" style="vertical-align:middle"><span> Save Changes </span></button>
                     </form>
-
                 </div>
-
-
-                <div>
-                    <div class="login-page">
                         <div class="form">
                             <form class="login-form" action="../PHP/deleteAccount.php" method="get">
                                 <div class="row">
@@ -166,16 +140,11 @@ if (!empty($_POST["change_pw"])) {
                                 <br>
                                 <button type = "submit" class="button2" style="vertical-align:middle"><span> Delete </span></button>
                             </form>
-
                         </div>
-
-                    </div>
                 </div>
 
             </div>
-        </div>
-    </div>
-</div>
+
 
 
 <script>
@@ -241,11 +210,11 @@ if (!empty($_POST["change_pw"])) {
 
 </div>
 
-<footer class="text-center">
+<footer id="bottomClass" class="text-center">
     <a class="up-arrow" href="index.php.html" data-toggle="tooltip" title="TO TOP">
         <span class="glyphicon glyphicon-chevron-up"></span>
     </a><br><br>
-    <p>Powerd by Corendon Airlines</p>
+    <p>Powered by Corendon Airlines</p>
     <button class="astext" onclick="typeWriter()"><p id="demo$">&#169 Team 2 </p></button>
 </footer>
 </body>
