@@ -1,6 +1,5 @@
 <?php
 include('../../styles/PHP/session.php');
-include ("session.php");
 ?>
 <html>
     <head>
@@ -10,17 +9,14 @@ include ("session.php");
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-        <link rel="stylesheet" type="text/css" href="../css/main.css">
-        <link rel="stylesheet" type="text/css" href="../css/Cog.css">
-        <link rel="stylesheet" type="text/css" href="../css/gallery.css">
+        <link rel="stylesheet" type="text/css" href="../../styles/css/main.css">
+        <link rel="stylesheet" type="text/css" href="../../styles/css/Cog.css">
+        <link rel="stylesheet" type="text/css" href="../../styles/css/gallery.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrapLocal.css">
         <script src="../js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-
-        <style type="text/css">
-
-        </style>
+        <style type="text/css"></style>
     </head>
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -41,8 +37,8 @@ include ("session.php");
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#">ACCOUNT
                                 <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="login.php">Login</a></li>
-                                <li><a href="register.php">Register</a></li>
+                                <li><a href="../../styles/PHP/login.php">Login</a></li>
+                                <li><a href="../../styles/PHP/register.php">Register</a></li>
                                 <li><a href="#">Forgot Password</a></li>
                             </ul>
                         </li>
@@ -51,14 +47,6 @@ include ("session.php");
             </div>
         </nav>
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
-
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-
-
             <div class="carousel-inner" role="listbox">
                 <?php
                 $images = glob("*.{jpg,gif,png,jpeg}", GLOB_BRACE);
@@ -90,22 +78,22 @@ include ("session.php");
             </a>
         </div>
 
-        
-        <?php
-                $images = glob("*.{jpg,gif,png,jpeg}", GLOB_BRACE);
-                foreach ($images as $image) {
-                        echo '<div class="box">';
-                        echo '<div class="boxInner">';
-                        echo '<img src="' . $image . '">';
-                        echo '<div class="overlay">';
-                        echo '<div class="button"><a href="download.php?file=' . urlencode($image) . '">Download</a></div>';
-                        echo '</div></div></div>';
-                }
-                ?> 
-        
-       
 
- 
+        <?php
+        $images = glob("*.{jpg,gif,png,jpeg}", GLOB_BRACE);
+        foreach ($images as $image) {
+            echo '<div class="box">';
+            echo '<div class="boxInner">';
+            echo '<img src="' . $image . '">';
+            echo '<div class="overlay">';
+            echo '<div class="button"><a href="download.php?file=' . urlencode($image) . '">Download</a></div>';
+            echo '</div></div></div>';
+        }
+        ?> 
+
+
+
+
 
 
         <!--test -->
@@ -164,15 +152,8 @@ include ("session.php");
 
         </script>
 
-     
+
         <div class="bottomlock">       
- <div class="form">
-            <form class="login-form">
-                <p class="message">Download all pictures</p>
-                <br>
-                <button>Download</button>
-            </form>
-        </div>
         </div>
 
         <footer class="text-center">

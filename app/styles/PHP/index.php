@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrapLocal.css">
     <script src="../js/main.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -54,27 +55,21 @@
 
         <div class="carousel-inner" role="listbox">
              <div class="item active">
-                 <img src="../../images/indexpic1.jpg" alt="Lara" width="1200" height="700">
+                 <img src="../../images/indexpic1.jpg" alt="Lara">
                  <div class="carousel-caption">
-                 <h3>Turkey</h3>
-                 <p>Enjoy the lovely beaches of Lara</p>
              </div>
         </div>
 
 
         <div class="item">
-            <img src="../../images/indexpic2.jpg" alt="Spanje" width="1200" height="700">
+            <img src="../../images/indexpic2.jpg" alt="Spanje">
               <div class="carousel-caption">
-                 <h3>Spain</h3>
-                 <p>Canary Islands</p>
               </div>
         </div>
 
         <div class="item">
-             <img src="../../images/indexpic3.jpg" alt="Los Angeles" width="1200" height="700">
+             <img src="../../images/indexpic3.jpg" alt="Los Angeles">
              <div class="carousel-caption">
-                <h3>Greece</h3>
-                <p>Kos</p>
              </div>
         </div>
 
