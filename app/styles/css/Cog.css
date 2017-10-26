@@ -3,8 +3,10 @@
 
 .login-page {
     width: 360px;
-    padding: 8% 0 0;
+    padding-top: 5%;
+    left: 43%;
     margin: auto;
+    position: absolute;
 }
 .form {
     position: relative;
@@ -96,24 +98,30 @@
     display: table-cell;
     text-align: center;
     vertical-align: middle;
+    padding-top: 60px;
 }
 .error-message {
-    padding: 7px 10px;
-    background: #fff1f2;
-    border: #ffd5da 1px solid;
-    color: #027506;
-    border-radius: 4px;
+    left: 46%;
+    padding-top: 90px;
+    color: #5f201f;
+    text-align: center;
+    position: absolute;
+    
 }
 .success-message {
-    padding: 7px 10px;
-    background: #cae0c4;
-    border: #c3d0b5 1px solid;
-    color: #80bdff;
-    border-radius: 4px;
+    left: 46%;
+    padding-top: 90px;
+    color: #5f201f;
+    text-align: center;
+    position: absolute;
+    
 }
 .helloworld {
     
   padding-bottom: 100px;  
   padding-top: 100px;
-    
+   
+}
+.commit{
+    padding: 90px;
 }

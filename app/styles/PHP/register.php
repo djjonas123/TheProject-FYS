@@ -105,7 +105,7 @@ if (!empty($_POST["register-user"])) {
             <div class="error-message"><?php if (isset($error_message)) echo $error_message; ?></div>
         <?php } ?>
             
-        <div id="husband">
+      
             <div id="form_login">
                 <div class="login-page">
                     <div class="form">
