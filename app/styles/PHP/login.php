@@ -35,7 +35,7 @@ if (!empty($_POST["login-user"])) {
                     unset($_POST);
                 } else {
                     $error_message = "Er was een probleem met het inloggen, probeer het alstublieft opnieuw.";
-                    header("../HTML/index.html");
+                    header("index.php");
                 }
             }
         } else {
@@ -46,7 +46,7 @@ if (!empty($_POST["login-user"])) {
 ?>
 <html lang="en">
     <head>
-        <title>Corendon Photo Gallary</title>
+        <title>Corendon Photo Gallery</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -69,7 +69,7 @@ if (!empty($_POST["login-user"])) {
                         <span class="icon-bar"></span>
                     </button>
 
-                    <a class="navbar-brand" href="../HTML/index.html">CORENDON</a>
+                    <a class="navbar-brand" href="index.php">CORENDON</a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
@@ -116,7 +116,7 @@ if (!empty($_POST["login-user"])) {
 
                         $('[data-toggle="tooltip"]').tooltip();
 
-                        $(".navbar a, footer a[href='../HTML/index.html']").on('click', function (event) {
+                        $(".navbar a, footer a[href='index.php']").on('click', function (event) {
                             if (this.hash !== "") {
                                 event.preventDefault();
                                 var hash = this.hash;
