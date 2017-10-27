@@ -12,7 +12,7 @@ include('../../styles/PHP/session.php');
         <link rel="stylesheet" type="text/css" href="../../styles/css/main.css">
         <link rel="stylesheet" type="text/css" href="../../styles/css/Cog.css">
         <link rel="stylesheet" type="text/css" href="../../styles/css/gallery.css">
-        <link rel="stylesheet" type="text/css" href="../css/bootstrapLocal.css">
+        <link rel="stylesheet" type="text/css" href="../../styles/css/bootstrapLocal.css">
         <script src="../js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
