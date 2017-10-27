@@ -67,6 +67,7 @@ if (!empty($_POST["register-user"])) {
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
+    
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -77,7 +78,6 @@ if (!empty($_POST["register-user"])) {
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-
                     <a class="navbar-brand" href="index.php">CORENDON</a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
@@ -94,59 +94,62 @@ if (!empty($_POST["register-user"])) {
                 </div>
             </div>
         </nav>
-        
+
         <?php if (!empty($success_message)) { ?>	
             <div class="success-message"><?php if (isset($success_message)) echo $success_message; ?></div>
         <?php } ?>
         <?php if (!empty($error_message)) { ?>	
             <div class="error-message"><?php if (isset($error_message)) echo $error_message; ?></div>
         <?php } ?>
-            
-      
-            <div id="form_login">
-                <div class="login-page">
-                    <div class="form">
-                        <form class="login-form"  method="post" action="">
-                            <input type="text" placeholder="E-mail address " name="email" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>">
-                            <input type="password" placeholder="Password" name="password" value=""/>
-                            <input type="password" placeholder="Repeat password" name="confirm_password" value=""/>
-                            <button type="submit" name="register-user" value="Register" class="button">Register</button>
-                            <p class="message">Already registered? <a href="login.php">Login here</a></p>
-                        </form>
-                    </div>
+
+        <div id="form_login">
+            <div class="login-page">
+                <div class="form">
+                    <form class="login-form"  method="post" action="">
+                        <input type="text" placeholder="E-mail address " name="email" value="<?php if (isset($_POST['email'])) echo $_POST['email']; ?>">
+                        <input type="password" placeholder="Password" name="password" value=""/>
+                        <input type="password" placeholder="Repeat password" name="confirm_password" value=""/>
+                        <button type="submit" name="register-user" value="Register" class="button">Register</button>
+                        <p class="message">Already registered? <a href="login.php">Login here</a></p>
+                    </form>
                 </div>
+            </div>
 
-                <script>
-                    $(document).ready(function () {
+            <script>
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+        $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 900, function(){
+                    window.location.hash = hash;
+                });
+            }
+        });
+    });
+            </script>       
+            <script>
+                var i = 0;
+                var txt = 'The Cake Is A Lie.';
+                var speed = 50;
 
-                        $('[data-toggle="tooltip"]').tooltip();
-
-                        $(".navbar a, footer a[href='index.php']").on('click', function (event) {
-                            if (this.hash !== "") {
-                                event.preventDefault();
-                                var hash = this.hash;
-                                $('html, body').animate({
-                                    scrollTop: $(hash).offset().top
-                                }, 900, function () {
-                                    window.location.hash = hash;
-                                });
-                            }
-                        });
-                    })
-                </script>
-
-                
-<script>
-import {typeWriter} from '../js/typeWriter.js';
-typeWriter();
-</script>
-
-                <footer  class="text-center">
-                    <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
-                        <span class="glyphicon glyphicon-chevron-up"></span>
-                    </a><br><br>
-                    <p>Powered by Corendon Airlines</p>
-                    <button class="astext" onclick="typeWriter()"><p id="demo$">&#169 Team 2 </p></button>
-                </footer>
-                </body>
-                </html>
+                function typeWriter() {
+                    if (i < txt.length) {
+                        document.getElementById("demo$").innerHTML += txt.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, speed);
+                    }
+                }
+            </script>
+            <footer  class="text-center">
+                <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+                    <span class="glyphicon glyphicon-chevron-up"></span>
+                </a><br><br>
+                <p>Powered by Corendon Airlines</p>
+                <button class="astext" onclick="typeWriter()"><p id="demo$">&#169 Team 2 </p></button>
+            </footer>
+    </body>
+</html>

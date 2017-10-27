@@ -91,56 +91,48 @@ include('../../styles/PHP/session.php');
             }
             ?> 
 
-
-
-
-
-
-            <!--test -->
             <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
             <script type="text/javascript">
                 $(function () {
-                    // See if this is a touch device
                     if ('ontouchstart' in window)
                     {
-                        // Set the correct body class
                         $('body').removeClass('no-touch').addClass('touch');
-
-                        // Add the touch toggle to show text
                         $('div.boxInner img').click(function () {
                             $(this).closest('.boxInner').toggleClass('touchFocus');
                         });
                     }
                 });
             </script>
-
             <script>
-                $(document).ready(function () {
-
-                    $('[data-toggle="tooltip"]').tooltip();
-
-                    $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
-                        if (this.hash !== "") {
-                            event.preventDefault();
-                            var hash = this.hash;
-                            $('html, body').animate({
-                                scrollTop: $(hash).offset().top
-                            }, 900, function () {
-                                window.location.hash = hash;
-                            });
-                        }
-                    });
-                })
+    $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();
+        $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+            if (this.hash !== "") {
+                event.preventDefault();
+                var hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 900, function(){
+                    window.location.hash = hash;
+                });
+            }
+        });
+    });
             </script>
             <script>
-                import {typeWriter} from '../js/typeWriter.js';
-                typeWriter();
+                var i = 0;
+                var txt = 'The Cake Is A Lie.';
+                var speed = 50;
+
+                function typeWriter() {
+                    if (i < txt.length) {
+                        document.getElementById("demo$").innerHTML += txt.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, speed);
+                    }
+                }
             </script>
-
-
-            <div class="bottomlock">       
-            </div>
-
+            <div class="bottomlock"></div>
             <footer id="bottomClass"  class="text-center">
                 <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
                     <span class="glyphicon glyphicon-chevron-up"></span>

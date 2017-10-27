@@ -1,8 +1,6 @@
 <?php
 include("session.php");
 
-// CHANGE PASSWORD:
-
 if (!empty($_POST["change_pw"])) {
     /* Form Required Field Validation */
     foreach ($_POST as $key => $value) {
@@ -16,7 +14,7 @@ if (!empty($_POST["change_pw"])) {
     if ($_POST['password'] != $_POST['confirm_password']) {
         $error_message = 'Passwords have to be identical';
     }
-
+    /* Queries */
     if (!isset($error_message)) {
         require_once("dbcontroller.php");
         $db_handle = new DBController();
@@ -42,7 +40,6 @@ if (!empty($_POST["change_pw"])) {
 }
 ?>
 <html lang="en">
-
     <head>
         <title>Account Settings</title>
         <meta charset="utf-8">
@@ -54,9 +51,9 @@ if (!empty($_POST["change_pw"])) {
         <link rel="stylesheet" type="text/css" href="../css/Account.css">
         <script src="../js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script
     </head>
+    
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -86,7 +83,6 @@ if (!empty($_POST["change_pw"])) {
             </div>
         </nav>
 
-    
  <div class="login-page">
         
       <center><?php if (!empty($success_message)) { ?>	
@@ -95,14 +91,11 @@ if (!empty($_POST["change_pw"])) {
             <?php if (!empty($error_message)) { ?>	
                 <div class="error-message"><?php if (isset($error_message)) echo $error_message; ?></div>
             <?php } ?></center>
-
-
+     
   <div id="halloworld">
-
                     <div class="form">
                        <h6>ACCOUNT SETTINGS</h6>
                     </div>
-
                     <div class="form">
                         <form class="login-form" method="post" action="">
                             <p>Change your password</p>  
@@ -124,40 +117,40 @@ if (!empty($_POST["change_pw"])) {
                             </form>
                         </div>
                 </div>
-
             </div>
-
-
-
-<script>
-    $(document).ready(function () {
-
+    <script>
+    $(document).ready(function(){
         $('[data-toggle="tooltip"]').tooltip();
-
-        $(".navbar a, footer a[href='index.php']").on('click', function (event) {
+        $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
             if (this.hash !== "") {
                 event.preventDefault();
                 var hash = this.hash;
                 $('html, body').animate({
                     scrollTop: $(hash).offset().top
-                }, 900, function () {
+                }, 900, function(){
                     window.location.hash = hash;
                 });
             }
         });
-    })
+    });
 </script>
 
 <script>
 import {typeWriter} from '../js/typeWriter.js';
-typeWriter();
+    var i = 0;
+    var txt = 'The Cake Is A Lie.';
+    var speed = 50;
+
+    function typeWriter() {
+        if (i < txt.length) {
+            document.getElementById("demo$").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
 </script>
 
-<div class="container text-center">
-
-
-</div>
-
+<div class="container text-center"></div>
 <footer id="bottomClass" class="text-center">
     <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
         <span class="glyphicon glyphicon-chevron-up"></span>
