@@ -147,44 +147,10 @@ if (!empty($_POST["change_pw"])) {
         });
     })
 </script>
+
 <script>
-
-    var i = 0;
-    var txt = 'The Cake Is A Lie.';
-    var speed = 50;
-
-    function typeWriter() {
-        if (i < txt.length) {
-            document.getElementById("demo$").innerHTML += txt.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
-        }
-
-    }
-</script>
-<script>
-
-    var rangeSlider = function () {
-        var slider = $('.range-slider'),
-                range = $('.range-slider__range'),
-                value = $('.range-slider__value');
-
-        slider.each(function () {
-
-            value.each(function () {
-                var value = $(this).prev().attr('value');
-                $(this).html(value);
-            });
-
-            range.on('input', function () {
-                $(this).next(value).html(this.value);
-            });
-        });
-    };
-
-    rangeSlider();
-
-
+import {typeWriter} from '../js/typeWriter.js';
+typeWriter();
 </script>
 
 <div class="container text-center">

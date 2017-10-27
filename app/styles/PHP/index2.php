@@ -174,17 +174,8 @@ include ("session.php");
 </script>
 
 <script>
-    var i = 0;
-    var txt = 'The Cake Is A Lie.';
-    var speed = 50;
-
-    function typeWriter() {
-        if (i < txt.length) {
-            document.getElementById("demo$").innerHTML += txt.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
-        }
-    }
+import {typeWriter} from '../js/typeWriter.js';
+typeWriter();
 </script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArnck0oNblnq5iB0-0FhWcO7EzUHkgZhQ&callback=myMap"></script>
