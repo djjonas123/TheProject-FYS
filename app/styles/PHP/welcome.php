@@ -13,7 +13,6 @@ include('../../styles/PHP/session.php');
         <link rel="stylesheet" type="text/css" href="../../styles/css/Cog.css">
         <link rel="stylesheet" type="text/css" href="../../styles/css/gallery.css">
         <link rel="stylesheet" type="text/css" href="../../styles/css/bootstrapLocal.css">
-        <script src="../js/main.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <style type="text/css"></style>
@@ -92,46 +91,9 @@ include('../../styles/PHP/session.php');
             ?> 
 
             <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.js"></script>
-            <script type="text/javascript">
-                $(function () {
-                    if ('ontouchstart' in window)
-                    {
-                        $('body').removeClass('no-touch').addClass('touch');
-                        $('div.boxInner img').click(function () {
-                            $(this).closest('.boxInner').toggleClass('touchFocus');
-                        });
-                    }
-                });
-            </script>
-            <script>
-    $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
-        $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-            if (this.hash !== "") {
-                event.preventDefault();
-                var hash = this.hash;
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 900, function(){
-                    window.location.hash = hash;
-                });
-            }
-        });
-    });
-            </script>
-            <script>
-                var i = 0;
-                var txt = 'The Cake Is A Lie.';
-                var speed = 50;
-
-                function typeWriter() {
-                    if (i < txt.length) {
-                        document.getElementById("demo$").innerHTML += txt.charAt(i);
-                        i++;
-                        setTimeout(typeWriter, speed);
-                    }
-                }
-            </script>
+            <script src="../../styles/js/onTouchStart.js"></script>
+            <script src="../../styles/js/tooltip.js"> </script>
+            <script src="../../styles/js/typeWriter.js"></script>
             <div class="bottomlock"></div>
             <footer id="bottomClass"  class="text-center">
                 <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">

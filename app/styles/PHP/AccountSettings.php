@@ -55,7 +55,6 @@ if (!empty($_POST["change_pw"])) {
     </head>
     
     <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
-
         <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -90,9 +89,7 @@ if (!empty($_POST["change_pw"])) {
             <?php } ?>
             <?php if (!empty($error_message)) { ?>	
                 <div class="error-message"><?php if (isset($error_message)) echo $error_message; ?></div>
-            <?php } ?></center>
-     
-  <div id="halloworld">
+            <?php } ?></center> 
                     <div class="form">
                        <h6>ACCOUNT SETTINGS</h6>
                     </div>
@@ -117,39 +114,8 @@ if (!empty($_POST["change_pw"])) {
                             </form>
                         </div>
                 </div>
-            </div>
-    <script>
-    $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
-        $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
-            if (this.hash !== "") {
-                event.preventDefault();
-                var hash = this.hash;
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 900, function(){
-                    window.location.hash = hash;
-                });
-            }
-        });
-    });
-</script>
-
-<script>
-import {typeWriter} from '../js/typeWriter.js';
-    var i = 0;
-    var txt = 'The Cake Is A Lie.';
-    var speed = 50;
-
-    function typeWriter() {
-        if (i < txt.length) {
-            document.getElementById("demo$").innerHTML += txt.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
-        }
-    }
-</script>
-
+            <script src="../js/tooltip.js"></script>
+            <script src="../js/typeWriter.js"></script>
 <div class="container text-center"></div>
 <footer id="bottomClass" class="text-center">
     <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
