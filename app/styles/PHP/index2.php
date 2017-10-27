@@ -189,14 +189,14 @@ include ("session.php");
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArnck0oNblnq5iB0-0FhWcO7EzUHkgZhQ&callback=myMap"></script>
 
-<footer class="text-center">
-    <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
-        <span class="glyphicon glyphicon-chevron-up"></span>
-    </a><br><br>
-    <p>Powered by Corendon Airlines</p>
-    <button class="astext" onclick="typeWriter()"><p id="demo$">&#169 Team 2 </p></button>
-</footer>
+        <footer class="text-center">
+            <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+                <span class="glyphicon glyphicon-chevron-up"></span>
+            </a><br><br>
+            <p>Powered by Corendon Airlines</p>
+            <button class="astext" onclick="typeWriter()"><p id="demo$">&#169 Team 2 </p></button>
+        </footer>
 
 
-</body>
+    </body>
 </html>

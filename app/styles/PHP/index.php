@@ -89,7 +89,7 @@ include ("session2.php");
                 <p>
                 <ul>
                     <li>Register for an account with your emailadress you registered.</li>
-                    <li>Login into you account.</li>
+                    <li><a href="login.php">Login</a> into your account.</li>
                     <li>Access your photo's and/or download them.</li>
                </ul>
                </p>
