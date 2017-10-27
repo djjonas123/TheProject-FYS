@@ -193,7 +193,9 @@ if (!empty($_POST["change_pw"])) {
 </div>
 
 <footer id="bottomClass" class="text-center">
-    <br>
+    <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </a><br><br>
     <p>Powered by Corendon Airlines</p>
     <button class="astext" onclick="typeWriter()"><p id="demo$">&#169 Team 2 </p></button>
 </footer>
