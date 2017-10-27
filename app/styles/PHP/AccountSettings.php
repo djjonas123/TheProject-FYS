@@ -113,22 +113,6 @@ if (!empty($_POST["change_pw"])) {
                             <br><br>
                         </form>
                     </div>
-                <div class="form">
-                    <form class="login-form">
-                        <div class="row">
-                            <p>How many days do you want to keep your pictures available on this site.</p>
-                            <br>
-                            <div class="range-slider">
-                                <input class="range-slider__range" type="range" value="100" min="2" max="365">
-                                <span class="range-slider__value">0</span>
-                            </div>
-
-                        </div>  
-                
-                        <br>
-                        <button class="button2" style="vertical-align:middle"><span> Save Changes </span></button>
-                    </form>
-                </div>
                         <div class="form">
                             <form class="login-form" action="../PHP/deleteAccount.php" method="get">
                                 <div class="row">
