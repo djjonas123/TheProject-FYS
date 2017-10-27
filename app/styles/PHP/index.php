@@ -88,7 +88,7 @@ include ("session2.php");
                 <p><em>Steps to access and download your pictures</em></p>
                 <p>
                 <ul>
-                    <li>Register for an account with your emailadress you registered.</li>
+                    <li>Register for an account with your emailadress entered in the photobooth</li>
                     <li><a href="login.php">Login</a> into your account.</li>
                     <li>Access your photo's and/or download them.</li>
                </ul>
