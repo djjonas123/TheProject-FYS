@@ -94,9 +94,9 @@ include ("session.php");
         <p><em>Steps to access and download your pictures</em></p>
         <p>
         <ul>
-        <li>Register for an account with your emailadress you registered.</li>
-        <li>Login into you account.</li>
-        <li>Access your photo's and/or download them.</li>
+        <li>Go to the top right of your screen and press on account.</li>
+        <li>Then press on gallery.</li>
+        <li>See al the pictures you made using the Corendon photobooth.</li>
         </ul>
         </p>
      </div>
@@ -128,7 +128,6 @@ include ("session.php");
         </div>
         <div id="menu2" class="tab-pane fade">
             <h2>Sven Wessel, Developer</h2>
-          
         </div>
         <div id="menu3" class="tab-pane fade">
             <h2>Jonas van Ree, Developer</h2>
